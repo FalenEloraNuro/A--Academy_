@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+:root {
+    --pinktua: #F5CAB7;
+    --pink: #FBE9D8;
+    --black: #1d1c1c;
+    --white: #fff;
+    --light-color: #666;
+    --box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 2rem;
+}
+
+.teacher {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.teacher .box {
+    width: 45%;
+    background: var(--white);
+    padding: 3rem 2rem;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    border-radius: 2rem;
+    margin-top: 70px;
+    margin-left: 20px;
+}
+
+.teacher .box img {
+    height: 17rem;
+    width: 20rem;
+    margin-bottom: 1rem;
+}
+
+.teacher .box:hover img {
+  transform: scale(1.1);
+  box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.3); 
+}
+
+.teacher .box h3 {
+    font-size: 2rem;
+    color: var(--black);
+    margin: 0.5rem 0;
+}
+
+.teacher .box p {
+    font-size: 1.5rem;
+    color: var(--light-color);
+    margin-bottom: 1rem;
+}
+
+.teacher .box .numbered-list {
+    list-style-type: none;
+    counter-reset: list;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.teacher .box .numbered-list li {
+    counter-increment: list;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+.teacher .box .numbered-list li:hover{
+  transform: scale(1.1);
+}
+.teacher .box .numbered-list li::before {
+    content: counter(list) ".";
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.deskripsi {
+    width: 45%;
+    background: var(--pinktua);
+    padding: 3rem 2rem;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    border-radius: 2rem;
+    margin-top: 70px;
+}
+.deskripsi:hover {
+  transform: scale(1.1);
+  box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.3); 
+}
+.deskripsi .content h3 {
+    font-size: 2.5rem;
+    color: var(--white);
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+.deskripsi .content h3 span:hover{
+  color: var(--light-color);
+}
+
+.deskripsi .content p {
+    font-size: 1.8rem;
+    color: var(--white);
+    line-height: 2;
+   
+}
+
+.deskripsi .content .btn {
+    font-size: 1.5rem;
+    margin-top: 3rem;
+    display: inline-block;
+    padding: .6rem 2rem;
+    border-radius: .5rem;
+    border: .2rem solid var(--white);
+    color: var(--white);
+    background: none;
+    cursor: pointer;
+}
+
+.deskripsi .content .btn:hover {
+    background: var(--pink);
+    color: var(--white);
+}
